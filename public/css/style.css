@@ -1,0 +1,408 @@
+body {
+    background-color: #fff5ea;
+    color: #3B3024;
+}
+
+/* header */
+header {
+    background-color: #cb9c7a;
+;
+    }
+
+.logo-titre {
+    display: flex;
+}
+
+nav img {
+    width: 3em;
+}
+
+
+/* 📱 Mobile : Affichage du menu burger uniquement */
+@media screen and (max-width: 1024px) {
+/* sidenav menus */
+.sidenav {
+    height: 50%;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: -150px; /* IMPORTANT : cache le menu hors de l'écran */
+    background-color: #cb9c7a;
+    padding: 20px;
+    transition: left 0.5s ease-in-out;
+    z-index: 1000;
+    display: block; /* S'assurer qu'il est bien affiché mais caché */
+    visibility: hidden; /* Ajouté pour s'assurer qu'il est caché */
+    opacity: 0; /* Rend invisible */
+}
+
+/* sidenav menu links */
+.sidenav a {
+    padding: 8px 8px 8px 2px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #3B3024;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #fff5ea;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* active class */
+.sidenav.active {
+    left: 0; /* Déplace le menu pour l'afficher */
+    visibility: visible;
+    opacity: 1;
+    transition: left 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* close button */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* icone burger*/
+.burger-icon  {
+    display: block;
+    margin: 6px 0;
+    width: 30px;
+}
+}
+
+/* main */
+
+.titre_texte {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titre_texte p {
+    font-size: 0.8em;
+}
+
+.titre_texte button {
+    background-color: #cb9c7a;
+    border: 2px solid #3B3024;
+    border-radius: 5px;
+}
+
+.titre_texte button:hover {
+    border: 2px solid #3B3024;
+    background-color: #3B3024;
+    color: #fff5ea;
+    border-radius: 5px;
+}
+
+.titre_texte img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.section-article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+    background-color: #cb9c7a;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+article {
+    border: 2px solid #3B3024;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 18em;
+    padding: 1em;
+}
+
+article img {
+    width: 5em;
+}
+
+article button {
+    background-color: #cb9c7a;
+    border: 2px solid #3B3024;
+    border-radius: 5px;
+}
+
+article button:hover {
+    border: 2px solid #3B3024;
+    background-color: #3B3024;
+    color: #fff5ea;
+}
+
+.h1-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.bg-img {
+    width: 80%;
+    height: 20em;
+    background-image: url('../images/coffees/650753915.png');
+    background-size: 150%;
+    display: flex;
+    justify-content: center;
+    opacity: 80%;
+}
+
+.bg-img h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff5ea;
+}
+
+.btn-categorie {
+    text-align: end;
+    padding: 2em;
+}
+
+.btn-categorie button {
+    background-color: #cb9c7a;
+    border: 2px solid #3B3024;
+    border-radius: 5px;
+}
+
+.btn-categorie button:hover {
+    border: 2px solid #3B3024;
+    background-color: #3B3024;
+    color: #fff5ea;
+}
+
+.btn-voir-tout{
+    padding: 2em 2em 0 2em;
+}
+
+.btn-voir-tout button {
+    background-color: #cb9c7a;
+    border: 2px solid #3B3024;
+    border-radius: 5px;
+}
+
+.btn-voir-tout button:hover {
+    border: 2px solid #3B3024;
+    background-color: #3B3024;
+    color: #fff5ea;
+}
+
+.img-illustration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.img-illustration img {
+    width: 80%;
+    height: 20em;
+    padding-bottom: 2em;
+}
+
+
+.publier p {
+    padding-left: 18em;
+    font-size: small;
+}
+
+.article-produit {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.article-produit h4 {
+    font-size: x-large;
+}
+ .article-p {
+    font-size: larger;
+ }
+
+footer {
+    background-color: #cb9c7a;
+    margin-top: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}  
+
+
+@media screen and (min-width: 768px) {
+
+    /* header */
+
+    .logo-titre img {
+        width: 8em;
+    }
+
+    .logo-titre h1 {
+        font-size: 3em;
+    }
+
+    .burger-icon {
+        display: none; /* Cache l'icône du menu burger */
+    }
+
+    .sidenav {
+        position: static; /* Empêcher le menu d'être fixe */
+        width: auto;
+        height: auto;
+        background-color: transparent; /* Pas de couleur de fond */
+        display: flex; /* Assurer l'affichage des liens */
+        visibility: visible; /* Correction */
+        opacity: 1; /* Correction */
+        left: 0; /* Position normale */
+        justify-content: flex-end;
+    }
+
+    .close {
+        visibility: hidden;
+    }
+
+    .sidenav ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidenav li {
+        display: inline;
+;
+    }
+
+    .sidenav a {
+        text-decoration: none;
+        font-size: x-large;
+        font-weight: bold;
+        color: #3B3024;
+        padding: 10px;
+    }
+
+    .sidenav a:hover {
+        color: #cb9c7a;
+        background: #3B3024;
+        border-radius: 5px;
+    }
+
+    /* main */
+
+    .titre_texte {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding-top: 10em;
+    }
+
+    .titre_texte img {
+        width: 40em;
+    }
+
+    .h2-p {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .h2-p h2 {
+        font-size: 3em;
+    }
+
+    .h2-p p {
+        font-size: 2em;
+    }
+
+    .h2-p button {
+        font-size: 2em;
+    }
+
+    .section-article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1em;
+    }
+
+    article {
+        width: 25%;
+        font-size: 2em;
+    }
+
+    article button {
+        font-size: 1em;
+    }
+
+    .bg-img {
+        width: 80%;
+        height: 60em;
+        background-size: 100%;
+    }
+
+    .bg-img h1 {
+        font-size: 8em;
+    }
+
+    .btn-categorie button {
+        font-size: xx-large;
+    }
+
+    .btn-voir-tout button {
+        font-size: xx-large;
+    }
+
+    .img-illustration img {
+        width: 70%;
+        height: 50em;
+    }
+
+    .article-produit {
+        width: 50%;
+        margin-left: 9em;
+    }
+
+    .publier p {
+        padding-left: 60em;
+    }
+
+    .article-produit h4 {
+        font-size: 2em;
+    }
+
+    .article-p {
+        font-size: 1em;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        font-weight: bold
+    }
+}
