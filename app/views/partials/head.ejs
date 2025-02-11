@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <% if (page === "accueil") { %>
+        <link rel="stylesheet" href="/css/accueil.css">
+        <script>console.log("Chargement de /css/accueil.css");</script>
+    <% } else if (page === "catalogue") { %>
+        <link rel="stylesheet" href="/css/catalogue.css">
+        <script>console.log("Chargement de /css/catalogue.css");</script>
+    <% } else if (page === "page-produit") { %>
+        <link rel="stylesheet" href="/css/page-produit.css">
+        <script>console.log("Chargement de /css/page-produit.css");</script>
+    <% } %>
+    <script src="/script.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <img src="public\images\logo.svg" alt="logo">
-            <p>oCoffee</p>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/about">Catalogue</a></li>
-                <li><a href="/contact">Boutique</a></li>
-            </ul>
+            <div class="logo-titre">
+                <img src="/images/logo.svg" alt="logo">
+                <h1>oCoffee</h1>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a id="closeBtn" href="#" class="close">x</a>
+                <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/catalogue">Catalogue</a></li>
+                    <li><a href="/page-produit">Boutique</a></li>
+                </ul>
+            </div>
+
+        <a href="#" id="openBtn">
+            <img src="/images/burger-bar.png" class="burger-icon">
+        </a>
+
         </nav>
     </header>

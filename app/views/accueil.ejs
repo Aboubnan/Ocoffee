@@ -1,0 +1,31 @@
+<%- include('partials/head') %>
+
+    <main>
+        <section>
+            <div class="titre_texte">
+                <div class="h2-p">
+                <h2>Bienvenue sur O'Coffee</h2>
+                <p>Notre boutique, où règne une ambiance chaleureuse et accueillante qui éveille tous vos sens. 
+                Dès que vous franchissez la porte, vous êtes enveloppé d'une douce symphonie d'arômes envoûtants 
+                de café fraîchement moulu.</p>
+                <a href="/catalogue"><button>Voir le catalogue</button></a>
+            </div>
+            <img src="/images/about.jpg" alt="café qui donne envie">
+            </div>
+        </section>
+
+
+        <h3>Nouveauté</h3>
+        <section class="section-article">
+            <% for( let cafe of lastThreeCafes ) { %>
+                <article>
+                    <img src="/images/coffees/<%= cafe.reference_code %>.png" alt="columbian">
+                    <h4><%= cafe.name %></h4>
+                    <p><%= cafe.description%></p>
+                    <a href="/produit/<%= cafe.id %>"><button>Découvrir</button></a>
+                </article>
+            <% } %>
+        </section>
+    </main>
+    
+<%- include('partials/foot') %>

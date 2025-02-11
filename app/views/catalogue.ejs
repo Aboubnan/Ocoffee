@@ -1,0 +1,44 @@
+<%- include('partials/head') %>
+    <main>
+
+    <div class="h1-img">
+        <div class="bg-img">
+        <h1>Notre catalogue</h1>
+        </div>
+    </div>
+
+    <div class="btn-categorie">
+        <label for="categorySelect">Catégorie :</label>
+<select id="categorySelect">
+    <option value="all">Toutes</option>
+    <option value="Corsé">Corsé</option>
+    <option value="Doux">Doux</option>
+    <option value="Acide">Acide</option>
+    <option value="Fruité">Fruité</option>
+    <option value="Chocolaté">Chocolaté</option>
+    <option value="Épicé">Épicé</option>
+</select>
+    </div>
+
+        <section class="article-catalogue" id="products-container">
+            <% products.slice(0, 3).forEach(product => { %>
+                <article class="product-card">
+                    <img src="/images/coffees/<%= product.reference_code %>.png" alt="<%= product.name %>">
+                    <h3><%= product.name %></h3>
+                    <p><%= product.description %></p>
+                    <p>Prix: <%= product.price %>€</p>
+                    <a href="/produit/<%= product.id %>"><button>Découvrir</button></a>
+                </article>
+            <% }); %>
+        </section>
+    
+
+        <div class="btn-voir-tout">
+            <% if (products.length > 3) { %>
+            <button id="loadMoreBtn">Voir tout</button>
+            <% } %>
+        </div>
+
+    </main>
+
+<%- include('partials/foot') %>

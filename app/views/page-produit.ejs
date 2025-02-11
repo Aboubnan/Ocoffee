@@ -1,0 +1,24 @@
+<%- include('partials/head') %>
+
+
+    <main>
+        <div class="img-illustration">
+            <img src="/images/coffees/909010558.png" alt="">
+        </div>
+
+        <article class="article-produit">
+            <div class="publier">
+            <p>Publié le XX/XX/XXXX</p>
+            </div>
+            <h4><%= produit.name %></h4>
+            <img src="/images/coffees/<%= produit.reference_code %>.png" alt="">
+            <p class="article-p"><strong>Description</strong> : <%= produit.description %></p>
+            <p class="article-p"><strong>Reference</strong> : <%= produit.reference_code %></p>
+            <p class="article-p"><strong>Origine</strong> : <%= produit.origin %></p>
+            <p class="article-p"><strong>Prix</strong> : <%= produit.price %>€</p>
+            <p class="article-p"><strong>Categorie</strong> : <%= produit.characteristic %></p>
+            <a href="/catalogue"><button>Catalogue</button></a>
+        </article>
+    </main>
+
+<%- include('partials/foot') %>

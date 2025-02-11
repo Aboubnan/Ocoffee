@@ -1,41 +1,36 @@
-// menus burger
+import 'dotenv/config';
 
-document.addEventListener("DOMContentLoaded", function () {
-    let sidenav = document.getElementById("mySidenav");  
-    let openBtn = document.getElementById("openBtn");
-    let closeBtn = document.getElementById("closeBtn");
+import express from 'express';
 
-    function isMobile() {
-        return window.innerWidth < 1024;
+import router from './app/router.js';
+
+import session from 'express-session';
+
+
+const PORT = process.env.PORT || 3000;
+
+const app = express();
+
+app.use(session({
+    resave: true,
+    saveUninitialized: true,
+    secret: "Guess it!",
+    cookie: {
+      secure: false,
+      maxAge: (1000*60*60) // ça fait une heure
     }
+  }));
 
-    openBtn.addEventListener("click", function () {
-        if (isMobile()) {
-            sidenav.classList.add("active");
-            document.body.style.overflow = "hidden";
-        }
-    });
+app.use(express.urlencoded({ extended: true }));
 
-    closeBtn.addEventListener("click", function (event) {
-        event.preventDefault();
-        sidenav.classList.remove("active");
-        document.body.style.overflow = "auto";
-    });
+app.use(express.static('public'));
 
-    // Fermer le menu en cliquant à l'extérieur
-    document.addEventListener("click", function (event) {
-        if (isMobile() && !sidenav.contains(event.target) && !openBtn.contains(event.target)) {
-            sidenav.classList.remove("active");
-            document.body.style.overflow = "auto";
-        }
-    });
+app.set('view engine', 'ejs');
 
-    // S'assurer que le menu normal est toujours affiché sur PC
-    window.addEventListener("resize", function () {
-        if (!isMobile()) {
-            sidenav.classList.remove("active");
-            document.body.style.overflow = "auto";
-        }
-    });
-});
+app.set('views', './app/views');
 
+app.use(router);
+
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
+  });

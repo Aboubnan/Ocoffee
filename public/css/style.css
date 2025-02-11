@@ -1,17 +1,22 @@
 body {
-    background-color: #fff5ea;
+    background-color: whitesmoke;
     color: #3B3024;
 }
 
 /* header */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* S'assure que le header reste au-dessus du contenu */
     background-color: #cb9c7a;
-;
     }
 
 .logo-titre {
     display: flex;
 }
+
 
 nav img {
     width: 3em;
@@ -81,49 +86,11 @@ nav img {
 }
 }
 
-/* main */
-
-.titre_texte {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.titre_texte p {
-    font-size: 0.8em;
-}
-
-.titre_texte button {
-    background-color: #cb9c7a;
-    border: 2px solid #3B3024;
-    border-radius: 5px;
-}
-
-.titre_texte button:hover {
-    border: 2px solid #3B3024;
-    background-color: #3B3024;
-    color: #fff5ea;
-    border-radius: 5px;
-}
-
-.titre_texte img {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
 .section-article {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     gap: 1em;
-}
-
-h3 {
-    font-size: 2em;
-    text-align: center;
-    background-color: #cb9c7a;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    margin-top: 5em;
-    margin-bottom: 2em;
 }
 
 article {
@@ -151,97 +118,6 @@ article button:hover {
     background-color: #3B3024;
     color: #fff5ea;
 }
-
-.h1-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
-}
-
-.bg-img {
-    width: 80%;
-    height: 20em;
-    background-image: url('../images/coffees/650753915.png');
-    background-size: 150%;
-    display: flex;
-    justify-content: center;
-    opacity: 80%;
-}
-
-.bg-img h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff5ea;
-}
-
-.btn-categorie {
-    text-align: end;
-    padding: 2em;
-}
-
-.btn-categorie button {
-    background-color: #cb9c7a;
-    border: 2px solid #3B3024;
-    border-radius: 5px;
-}
-
-.btn-categorie button:hover {
-    border: 2px solid #3B3024;
-    background-color: #3B3024;
-    color: #fff5ea;
-}
-
-.btn-voir-tout{
-    padding: 2em 2em 0 2em;
-}
-
-.btn-voir-tout button {
-    background-color: #cb9c7a;
-    border: 2px solid #3B3024;
-    border-radius: 5px;
-}
-
-.btn-voir-tout button:hover {
-    border: 2px solid #3B3024;
-    background-color: #3B3024;
-    color: #fff5ea;
-}
-
-.img-illustration {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
-}
-
-.img-illustration img {
-    width: 80%;
-    height: 20em;
-    padding-bottom: 2em;
-}
-
-
-.publier p {
-    padding-left: 18em;
-    font-size: small;
-}
-
-.article-produit {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.article-produit h4 {
-    font-size: x-large;
-}
- .article-p {
-    font-size: larger;
- }
 
 footer {
     background-color: #cb9c7a;
@@ -311,43 +187,6 @@ footer {
 
     /* main */
 
-    .titre_texte {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        text-align: center;
-        padding-top: 10em;
-    }
-
-    .titre_texte img {
-        width: 40em;
-    }
-
-    .h2-p {
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .h2-p h2 {
-        font-size: 3em;
-    }
-
-    .h2-p p {
-        font-size: 2em;
-    }
-
-    .h2-p button {
-        font-size: 2em;
-    }
-
-    .section-article {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 1em;
-    }
 
     article {
         width: 25%;
@@ -358,45 +197,9 @@ footer {
         font-size: 1em;
     }
 
-    .bg-img {
-        width: 80%;
-        height: 60em;
-        background-size: 100%;
-    }
+    
 
-    .bg-img h1 {
-        font-size: 8em;
-    }
-
-    .btn-categorie button {
-        font-size: xx-large;
-    }
-
-    .btn-voir-tout button {
-        font-size: xx-large;
-    }
-
-    .img-illustration img {
-        width: 70%;
-        height: 50em;
-    }
-
-    .article-produit {
-        width: 50%;
-        margin-left: 9em;
-    }
-
-    .publier p {
-        padding-left: 60em;
-    }
-
-    .article-produit h4 {
-        font-size: 2em;
-    }
-
-    .article-p {
-        font-size: 1em;
-    }
+   
 
     footer {
         display: flex;
