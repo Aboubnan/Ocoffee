@@ -1,0 +1,56 @@
+main {
+    margin-top: 10em;
+    
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    max-height: 500px;
+    margin-top: 2em;
+}
+
+h2  {
+    text-align: center;
+    font-size: xx-large;
+}
+
+p {
+    text-align: center;
+    font-size: large;
+}
+
+button {
+    background-color: #cb9c7a;
+    border: 2px solid #3B3024;
+    font-size: large;
+    border-radius: 5px;
+}
+
+button:hover {
+    border: 2px solid #3B3024;
+    background-color: #3B3024;
+    color: #fff5ea;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+    padding-top: 10em;
+}
+
+button {
+    background-color: #cb9c7a;
+    border: 2px solid #3B3024;
+    font-size: large;
+    border-radius: 5px;
+}
+
+button:hover {
+    border: 2px solid #3B3024;
+    background-color: #3B3024;
+    color: #fff5ea;
+}
+}

@@ -38,5 +38,9 @@ router.get('/favoris/delete/:id', mainController.bookmarksDelete)
 // page favoris
 router.get('/favoris', mainController.bookmarksPage);
 
+router.use((req, res) => {
+    res.status(404).render("404", { title: "Page non trouvée", page: "404" });
+});
+
 
 export default router;
