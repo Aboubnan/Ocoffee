@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p>Prix: ${product.price}€</p>
                 <p><strong>Catégorie :</strong> ${product.characteristic}</p>
                 <a href="/produit/${product.id}"><button>Découvrir</button></a>
+                <a href="/favoris/add/${product.id}">+ Ajouter aux favoris</a>
             `;
 
             productsContainer.appendChild(productCard);

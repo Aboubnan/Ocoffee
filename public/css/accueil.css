@@ -43,11 +43,12 @@ h3 {
         flex-direction: row;
         justify-content: space-around;
         text-align: center;
-        padding:20em;
+        padding: 20em, 0, 20em, 0;
     }
 
     .titre_texte img {
-        width: 40em;
+        padding-top: 10em;
+        width:  auto;
     }
 
     .h2-p {

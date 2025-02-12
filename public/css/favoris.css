@@ -1,0 +1,78 @@
+main {
+    margin-top: 10em;
+  }
+
+main h3 {
+  font-size: medium;
+  text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+  }
+
+
+  table thead {
+    background-color: #f9f9f9;
+  }
+
+  table thead th {
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  table tbody tr td {
+    padding: 0.5em;
+    text-align: center;
+    border: 1px solid #3B3024;
+  }
+
+  table img {
+    width: 5em;
+  }
+
+  .row-total {
+    font-size: 1.3em;
+    font-weight: bolder;
+  }
+
+  .item-subtotal {
+    font-weight: bold;
+  }
+
+  button {
+    background-color: #cb9c7a;
+    border: 2px solid #3B3024;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    border: 2px solid #3B3024;
+    background-color: #3B3024;
+    color: #fff5ea;
+    border-radius: 5px;
+  }
+
+
+@media screen and (min-width: 768px) {
+  main {
+    margin-top: 15em;
+  }
+
+
+  button {
+    font-size: 1em;
+}
+
+  a {
+    text-decoration: none;
+    color: #3B3024;
+  }
+
+  a:hover {
+    color: #fff5ea;
+  }
+}

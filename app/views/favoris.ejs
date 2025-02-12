@@ -1,0 +1,45 @@
+<%- include('partials/head') %>
+<main>
+
+    <div class="row">
+      <div class="col">
+        <h3>Vos favoris</h3>
+
+        <table>
+          <thead>
+            <th>Article</th>
+            <th>Prix</th>
+            <th></th>
+          </thead>
+          <tbody>
+            <% for( let cafe of favoris ) { %>
+              <tr>
+                <td>
+                  <img src="./images/coffees/<%= cafe.reference_code %>.png" alt="">
+                      <h5><%= cafe.name %></h5>
+                </td>
+
+                <td>
+                  <p>€<%= cafe.price %></p>
+                </td>
+
+                <td>
+                  <a href="/favoris/delete/<%= cafe.id %>"><button>Enlever de la liste</a></button>
+                </td>
+              </tr>
+            <% } %>
+        </table>
+
+        <div class="row">
+          <div class="col text-right">
+              <a href="/catalogue">
+                <button>Retour au catalogue</button>
+              </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+<%- include('partials/foot') %>

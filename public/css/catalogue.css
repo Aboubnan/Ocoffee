@@ -9,7 +9,7 @@
 
 .bg-img {
     width: 80%;
-    height: 20em;
+    height: 10em;
     background-image: url('../images/coffees/650753915.png');
     background-size: 150%;
     display: flex;
@@ -29,16 +29,22 @@
     padding: 2em;
 }
 
-.btn-categorie button {
+.btn-categorie select {
     background-color: #cb9c7a;
     border: 2px solid #3B3024;
+    font-size: x-large;
     border-radius: 5px;
 }
 
-.btn-categorie button:hover {
+.btn-categorie select:hover {
     border: 2px solid #3B3024;
     background-color: #3B3024;
     color: #fff5ea;
+}
+
+.btn-categorie label {
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 .btn-voir-tout{
@@ -55,6 +61,10 @@
     border: 2px solid #3B3024;
     background-color: #3B3024;
     color: #fff5ea;
+}
+
+.article-catalogue {
+    width: auto;
 }
 
 @media screen and (min-width: 768px) {

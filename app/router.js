@@ -12,6 +12,13 @@ router.get('/catalogue', mainController.cataloguePage);
 
 router.get('/page-produit', mainController.produitPage);
 
+router.use((req, res, next) => {
+    if (!req.session.bookmarks) {
+        req.session.bookmarks = [];
+    }
+    next();
+});
+
 router.get("/api/products", async (req, res) => {
     try {
         const products = await dataMapper.getAllProducts();
@@ -21,6 +28,15 @@ router.get("/api/products", async (req, res) => {
         res.status(500).json({ error: "Erreur serveur" });
     }
 });
+
+// action d'ajouter en favoris
+router.get('/favoris/add/:id', mainController.bookmarksAdd);
+
+// action de supprimer un favoris
+router.get('/favoris/delete/:id', mainController.bookmarksDelete)
+
+// page favoris
+router.get('/favoris', mainController.bookmarksPage);
 
 
 export default router;

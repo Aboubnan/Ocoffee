@@ -8,6 +8,9 @@ export const dataMapper = {
         const result = await client.query(query);
         return result.rows;
     },
+
+    
+
     getLastThreeCafes: async () => {
         const query = {
             text: 'SELECT * FROM "cafes" ORDER BY "id" DESC LIMIT 3',
