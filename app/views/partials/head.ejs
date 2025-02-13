@@ -7,20 +7,18 @@
     <link rel="stylesheet" href="/css/style.css">
     <% if (page === "accueil") { %>
         <link rel="stylesheet" href="/css/accueil.css">
-        <script>console.log("Chargement de /css/accueil.css");</script>
     <% } else if (page === "catalogue") { %>
         <link rel="stylesheet" href="/css/catalogue.css">
-        <script>console.log("Chargement de /css/catalogue.css");</script>
     <% } else if (page === "page-produit") { %>
         <link rel="stylesheet" href="/css/page-produit.css">
-        <script>console.log("Chargement de /css/page-produit.css");</script>
     <% } else if (page === "favoris") { %>
         <link rel="stylesheet" href="/css/favoris.css">
-        <script>console.log("Chargement de /css/favoris.css");</script>
     <% } else if (page === "404") { %>
         <link rel="stylesheet" href="/css/404.css">
-        <script>console.log("Chargement de /css/404.css");</script>
+    <% } else if (page === "contact") { %>
+        <link rel="stylesheet" href="/css/contact.css">
     <% } %>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="/script.js" defer></script>
 </head>
 <body>
@@ -37,6 +35,7 @@
                     <li><a href="/">Accueil</a></li>
                     <li><a href="/catalogue">Catalogue</a></li>
                     <li><a href="/favoris">Favoris</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
 

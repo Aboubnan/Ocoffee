@@ -115,3 +115,52 @@ document.addEventListener("DOMContentLoaded", () => {
     // Charger les produits au démarrage
     loadProducts();
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".contact-form");
+
+    if (!form) {
+        console.error("❌ Formulaire non trouvé ! Vérifie que la classe `.contact-form` est bien présente dans le HTML.");
+        return;
+    }
+
+    if (typeof emailjs === "undefined") {
+        console.error("❌ EmailJS n'est pas chargé !");
+        return;
+    }
+
+    emailjs.init("wpwZB1Uz2SfuZltuX"); // Remplace par ton vrai User ID
+    console.log("✔ EmailJS initialisé");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+        console.log("✔ Formulaire soumis !");
+
+        // Récupérer les valeurs du formulaire
+        const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value
+        };
+
+        console.log("Données du formulaire :", formData);
+
+        // Envoyer l'email via EmailJS
+        emailjs.send("service_g7a764m", "template_drqwa5l", formData)
+            .then(response => {
+                alert("📨 Message envoyé avec succès !");
+                console.log("✅ SUCCESS!", response.status, response.text);
+                form.reset(); // Réinitialise le formulaire
+            })
+            .catch(error => {
+                alert("⚠ Une erreur est survenue...");
+                console.error("❌ FAILED...", error);
+            });
+            console.log("Service ID utilisé :", "service_g7a764m");
+            console.log("Template ID utilisé :", "template_drqwa5l");
+    });
+
+});

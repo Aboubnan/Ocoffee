@@ -4,14 +4,16 @@ import { dataMapper } from './data-mappers/data-mapper.js';
 
 const router = express.Router();
 
+// page d'acceuil
 router.get('/', mainController.homePage);
 
+// page produit
 router.get('/produit/:id', mainController.produitPage);
 
+// page catalogue
 router.get('/catalogue', mainController.cataloguePage);
 
-router.get('/page-produit', mainController.produitPage);
-
+// page favoris
 router.use((req, res, next) => {
     if (!req.session.bookmarks) {
         req.session.bookmarks = [];
@@ -19,6 +21,7 @@ router.use((req, res, next) => {
     next();
 });
 
+// API
 router.get("/api/products", async (req, res) => {
     try {
         const products = await dataMapper.getAllProducts();
@@ -38,6 +41,10 @@ router.get('/favoris/delete/:id', mainController.bookmarksDelete)
 // page favoris
 router.get('/favoris', mainController.bookmarksPage);
 
+// page contact
+router.get('/contact', mainController.contactPage);
+
+// middleware 404
 router.use((req, res) => {
     res.status(404).render("404", { title: "Page non trouvée", page: "404" });
 });

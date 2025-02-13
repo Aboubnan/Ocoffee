@@ -54,6 +54,20 @@ const mainController = {
           }
     },
 
+    // page favoris
+    bookmarksPage: (req, res) => {
+      if (!req.session.bookmarks) {
+        req.session.bookmarks = [];
+      }
+        res.render('favoris', { page: 'favoris', favoris: req.session.bookmarks})
+      },
+
+    // page contact
+    contactPage: (req, res) => {
+        res.render('contact', { page : "contact" });
+    },
+    
+    // méthode pour ajouter un favoris
     bookmarksAdd: async (req, res) => {
         try {
           const cafeId = Number(req.params.id);
@@ -88,25 +102,19 @@ const mainController = {
         }
     
     },
-      // pour afficher les favoris
-        bookmarksPage: (req, res) => {
-          if (!req.session.bookmarks) {
-            req.session.bookmarks = [];
-          }
-          res.render('favoris', { page: 'favoris', favoris: req.session.bookmarks})
-        },
+
     
-        // méthode pour supprimer un favoris
-        bookmarksDelete: (req, res) => {
+    // méthode pour supprimer un favoris
+    bookmarksDelete: (req, res) => {
     
-          const cafeId = Number(req.params.id)
+      const cafeId = Number(req.params.id)
     
-          const updatedBookmarks = req.session.bookmarks.filter((cafe) => cafe.id !== cafeId)
+      const updatedBookmarks = req.session.bookmarks.filter((cafe) => cafe.id !== cafeId)
     
-          req.session.bookmarks = updatedBookmarks
+      req.session.bookmarks = updatedBookmarks
     
-          res.redirect('/favoris');
-        }, 
+      res.redirect('/favoris');
+    }, 
 }
 
 export default mainController;
