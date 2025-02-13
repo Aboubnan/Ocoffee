@@ -1,6 +1,10 @@
 body {
-    background-color: whitesmoke;
+    background-color: white;
     color: #3B3024;
+}
+
+button {
+    border: none;
 }
 
 /* header */
@@ -11,6 +15,7 @@ header {
     width: 100%;
     z-index: 1000; /* S'assure que le header reste au-dessus du contenu */
     background-color: #cb9c7a;
+    color: white;
     }
 
 .logo-titre {
@@ -46,13 +51,13 @@ nav img {
     padding: 8px 8px 8px 2px;
     text-decoration: none;
     font-size: 25px;
-    color: #3B3024;
+    color: white;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #fff5ea;
+    color: white;
 }
 
 .sidenav ul {
@@ -109,14 +114,13 @@ article img {
 
 article button {
     background-color: #cb9c7a;
-    border: 2px solid #3B3024;
     border-radius: 5px;
+    color: white;
 }
 
 article button:hover {
-    border: 2px solid #3B3024;
     background-color: #3B3024;
-    color: #fff5ea;
+    color: white;
 }
 
 footer {
@@ -124,6 +128,7 @@ footer {
     margin-top: 5em;
     padding-top: 1em;
     padding-bottom: 1em;
+    color: white;
 }  
 
 
@@ -175,12 +180,12 @@ footer {
         text-decoration: none;
         font-size: x-large;
         font-weight: bold;
-        color: #3B3024;
+        color: white;
         padding: 10px;
     }
 
     .sidenav a:hover {
-        color: #cb9c7a;
+        color: white;
         background: #3B3024;
         border-radius: 5px;
     }
@@ -202,10 +207,6 @@ footer {
     article button {
         font-size: 1em;
     }
-
-    
-
-   
 
     footer {
         display: flex;

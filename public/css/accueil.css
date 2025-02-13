@@ -11,12 +11,11 @@
 
 .titre_texte button {
     background-color: #cb9c7a;
-    border: 2px solid #3B3024;
+    color: white;
     border-radius: 5px;
 }
 
 .titre_texte button:hover {
-    border: 2px solid #3B3024;
     background-color: #3B3024;
     color: #fff5ea;
     border-radius: 5px;
@@ -31,6 +30,7 @@ h3 {
     font-size: 2em;
     text-align: center;
     background-color: #cb9c7a;
+    color: white;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     margin-top: 5em;

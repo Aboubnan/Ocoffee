@@ -11,12 +11,12 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1em;
-    border: 1px solid #ccc;
   }
 
 
   table thead {
-    background-color: #f9f9f9;
+    background-color: #cb9c7a;
+    color: white;
   }
 
   table thead th {
@@ -45,12 +45,12 @@ table {
 
   button {
     background-color: #cb9c7a;
-    border: 2px solid #3B3024;
+    color: white;
     border-radius: 5px;
   }
 
   button:hover {
-    border: 2px solid #3B3024;
+    color: white;
     background-color: #3B3024;
     color: #fff5ea;
     border-radius: 5px;
@@ -62,6 +62,9 @@ table {
     margin-top: 15em;
   }
 
+  main h3 {
+    font-size: xx-large;
+  }
 
   button {
     font-size: 1em;
@@ -69,7 +72,7 @@ table {
 
   a {
     text-decoration: none;
-    color: #3B3024;
+    color: white;
   }
 
   a:hover {

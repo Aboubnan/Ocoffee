@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #fff5ea;
+    color: white;
 }
 
 .btn-categorie {
@@ -31,13 +31,12 @@
 
 .btn-categorie select {
     background-color: #cb9c7a;
-    border: 2px solid #3B3024;
     font-size: x-large;
     border-radius: 5px;
+    color: white;
 }
 
 .btn-categorie select:hover {
-    border: 2px solid #3B3024;
     background-color: #3B3024;
     color: #fff5ea;
 }
@@ -53,12 +52,11 @@
 
 .btn-voir-tout button {
     background-color: #cb9c7a;
-    border: 2px solid #3B3024;
+    color: white;
     border-radius: 5px;
 }
 
 .btn-voir-tout button:hover {
-    border: 2px solid #3B3024;
     background-color: #3B3024;
     color: #fff5ea;
 }
@@ -72,6 +70,17 @@
     margin-bottom: 1em;
 }
 
+.product-card a {
+    margin-top: 0.5em;
+    color: #cb9c7a;
+    text-decoration: none;
+}
+
+.product-card a:hover {
+    background-color: #cb9c7a;
+    border-radius: 5px;
+    color: white;
+}
 
 @media screen and (min-width: 768px) {
     .article-catalogue {

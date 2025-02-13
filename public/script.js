@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("❌ Erreur chargement produits :", error));
     }
 
-    // Fonction pour afficher les produits
+    // Fonction pour afficher les produits dans catalogue
     function displayProducts(products) {
         productsContainer.innerHTML = ""; // Vider la liste actuelle
 
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+// formulaire de contact emailjs
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".contact-form");
 
@@ -159,8 +159,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("⚠ Une erreur est survenue...");
                 console.error("❌ FAILED...", error);
             });
-            console.log("Service ID utilisé :", "service_g7a764m");
-            console.log("Template ID utilisé :", "template_drqwa5l");
     });
 
+});
+
+// carte leaflet
+document.addEventListener("DOMContentLoaded", function () {
+    // Vérifie si la div "map" existe pour éviter les erreurs
+    const mapContainer = document.getElementById("map");
+    if (!mapContainer) {
+        console.error("❌ Erreur : l'élément #map n'existe pas !");
+        return;
+    }
+
+    // Initialiser la carte Leaflet
+    const map = L.map('map').setView([48.858844, 2.294351], 13); // Coordonnées par défaut (Tour Eiffel, Paris)
+
+    // Ajouter le fond de carte OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Ajouter un marqueur sur la carte
+    const marker = L.marker([48.858844, 2.294351]).addTo(map)
+        .bindPopup("<b>Notre emplacement</b><br>Nous sommes ici !")
+        .openPopup();
 });
