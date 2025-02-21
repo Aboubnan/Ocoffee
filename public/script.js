@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     loadMoreBtn.style.display = "block";
                 }
             })
-            .catch(error => console.error("❌ Erreur chargement produits :", error));
+            .catch(error => console.error("Erreur chargement produits :", error));
     }
 
     // Fonction pour afficher les produits dans catalogue
