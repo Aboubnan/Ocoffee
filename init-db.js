@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';
-import client from './data/database.js'; // adapte le chemin si besoin
+import client from './app/data/database.js';
 
 try {
   const sql = await fs.readFile('./init.sql', 'utf-8');
