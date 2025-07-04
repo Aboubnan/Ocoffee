@@ -1,13 +1,13 @@
--- 1️⃣ Création de la base de données (DO $$ pour éviter les erreurs si elle existe déjà)
-DO $$ 
-BEGIN
-    IF NOT EXISTS (SELECT FROM pg_database WHERE datname = 'ocoffee') THEN
-        CREATE DATABASE ocoffee;
-    END IF;
-END $$;
+-- -- 1️⃣ Création de la base de données (DO $$ pour éviter les erreurs si elle existe déjà)
+-- DO $$ 
+-- BEGIN
+--     IF NOT EXISTS (SELECT FROM pg_database WHERE datname = 'ocoffee') THEN
+--         CREATE DATABASE ocoffee;
+--     END IF;
+-- END $$;
 
--- Se connecter manuellement à la base avant d'exécuter les commandes suivantes :
--- \c ocoffee;
+-- -- Se connecter manuellement à la base avant d'exécuter les commandes suivantes :
+-- -- \c ocoffee;
 
 -- 2️⃣ Création de la table cafés
 CREATE TABLE IF NOT EXISTS cafes (
