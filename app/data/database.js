@@ -10,6 +10,8 @@
 // export default client;
 
 import pg from 'pg';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const client = new pg.Client({
   connectionString: process.env.PG_URL,
@@ -21,4 +23,3 @@ const client = new pg.Client({
 await client.connect();
 
 export default client;
-
