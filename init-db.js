@@ -1,4 +1,4 @@
-import fs from 'fs/promises';
+import fs from 'node:fs/promises';
 import client from './data/database.js'; // adapte le chemin si besoin
 
 try {
